@@ -206,9 +206,6 @@ export default function App() {
           <section className="results-grid">
             <aside className="seed-card">
               <div className="seed-badge">Now analyzing</div>
-              <div className="seed-art">
-                <div className="seed-art-glow" />
-              </div>
               <div className="seed-copy">
                 <h2>{result.detectedTitle}</h2>
                 <p>{result.detectedArtist}</p>
