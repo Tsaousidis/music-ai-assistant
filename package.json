@@ -1,0 +1,17 @@
+{
+  "name": "music-ai-gemini-only",
+  "version": "1.0.0",
+  "description": "Gemini-only music recommendation proof of logic",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "node src/index.js",
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "@google/genai": "^1.0.0",
+    "dotenv": "^16.4.5",
+    "zod": "^3.23.8",
+    "zod-to-json-schema": "^3.23.3"
+  }
+}
