@@ -3,7 +3,14 @@ import "./index.css";
 
 const API_BASE = "http://localhost:3000";
 
+function buildYouTubeSearchUrl(title, artist) {
+  const query = encodeURIComponent(`${title} ${artist}`);
+  return `https://www.youtube.com/results?search_query=${query}`;
+}
+
 function SongRow({ song, index }) {
+  const youtubeUrl = buildYouTubeSearchUrl(song.title, song.artist);
+
   return (
     <div className="song-row">
       <div className="song-index">{String(index + 1).padStart(2, "0")}</div>
@@ -13,7 +20,7 @@ function SongRow({ song, index }) {
       </div>
       <a
         className="song-link"
-        href={song.youtubeSearchUrl}
+        href={youtubeUrl}
         target="_blank"
         rel="noreferrer"
       >
