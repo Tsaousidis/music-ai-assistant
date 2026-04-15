@@ -9,19 +9,25 @@ export function createSessionState(initialQuery, initialResult) {
       {
         type: "initial",
         query: initialQuery,
-        result: initialResult.songs,
-      },
-    ],
+        result: initialResult.songs
+      }
+    ]
   };
 }
 
-export function updateSessionWithRefinement(session, refinementPrompt, refinedResult) {
+export function updateSessionWithRefinement(
+  session,
+  refinementPrompt,
+  refinedResult
+) {
   session.currentSongs = refinedResult.songs;
   session.playlistName = refinedResult.playlistName;
+
   session.history.push({
     type: "refinement",
     refinementPrompt,
-    result: refinedResult.songs,
+    result: refinedResult.songs
   });
+
   return session;
 }
