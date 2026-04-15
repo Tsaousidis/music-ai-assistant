@@ -220,7 +220,7 @@ export default function App() {
               <div className="panel-header">
                 <div>
                   <h3>{result.playlistName}</h3>
-                  <p>10 tracks curated for this vibe</p>
+                  <p>20 tracks curated for this vibe</p>
                 </div>
               </div>
 
