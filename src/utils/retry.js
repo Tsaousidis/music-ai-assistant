@@ -5,7 +5,7 @@ function sleep(ms) {
 export async function withRetry(fn, options = {}) {
   const {
     retries = 4,
-    delayMs = 1000
+    delayMs = 2000
   } = options;
 
   let lastError;
@@ -40,7 +40,7 @@ export async function withRetry(fn, options = {}) {
         `Gemini unavailable. Retry ${attempt}/${retries - 1} in ${delayMs}ms...`
       );
 
-      await sleep(delayMs);
+      await sleep(delayMs * attempt);
     }
   }
 

@@ -14,7 +14,8 @@ ${rawInput}
 Steps:
 1. Identify the song (title + artist) as accurately as possible.
 2. Understand its vibe, production, and mood.
-3. Return EXACTLY 10 similar songs.
+3. Generate a short, creative playlist title (max 5 words) that captures the vibe of the recommendations.
+4. Return EXACTLY 10 similar songs.
 
 Rules:
 - Only real songs
@@ -23,6 +24,7 @@ Rules:
 - At most 1 song from the same artist
 - Avoid obvious or lazy recommendations
 - Prefer strong vibe similarity over popularity
+- The playlist title must be short, creative, and natural
 
 Output:
 Return ONLY valid JSON.
@@ -31,6 +33,7 @@ Format:
 {
   "detectedTitle": "...",
   "detectedArtist": "...",
+  "playlistName": "Neon Night Drive",
   "songs": [
     { "title": "...", "artist": "..." }
   ]
