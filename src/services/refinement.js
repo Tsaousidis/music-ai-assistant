@@ -25,7 +25,7 @@ ${refinementPrompt}
 Your task:
 1. Keep the same detected seed song.
 2. Generate a NEW short, creative playlist title (max 5 words) that matches the refined vibe.
-3. Return EXACTLY 10 refined song recommendations.
+3. Return EXACTLY 20 refined song recommendations.
 
 Rules:
 - Only real songs

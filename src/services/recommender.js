@@ -15,7 +15,7 @@ Steps:
 1. Identify the song (title + artist) as accurately as possible.
 2. Understand its vibe, production, and mood.
 3. Generate a short, creative playlist title (max 5 words) that captures the vibe of the recommendations.
-4. Return EXACTLY 10 similar songs.
+4. Return EXACTLY 20 similar songs.
 
 Rules:
 - Only real songs

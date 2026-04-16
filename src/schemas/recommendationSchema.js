@@ -9,5 +9,5 @@ export const recommendationSchema = z.object({
       title: z.string(),
       artist: z.string()
     })
-  ).length(10)
+  ).length(20)
 });
