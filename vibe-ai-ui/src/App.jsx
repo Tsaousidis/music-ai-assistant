@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import "./index.css";
+import Loader from "./Loader";
 
 const API_BASE = "http://localhost:3000";
 
@@ -56,6 +57,7 @@ export default function App() {
     setError("");
     setPlaylistSuccess(null);
     setLoadingRecommend(true);
+    await new Promise(r => setTimeout(r, 500));
 
     try {
       const response = await fetch(`${API_BASE}/recommend`, {
@@ -202,7 +204,9 @@ export default function App() {
 
         {error ? <div className="error-box">{error}</div> : null}
 
-        {result ? (
+        {loadingRecommend ? (
+          <Loader />
+        ) : result ? (
           <section className="results-grid">
             <aside className="seed-card">
               <div className="seed-badge">Now analyzing</div>
